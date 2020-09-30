@@ -1,14 +1,4 @@
 # Entity-Relation-Extraction
-Entity and Relation Extraction Based on TensorFlow. 基于 TensorFlow 的实体及关系抽取，2019语言与智能技术竞赛信息抽取（实体与关系抽取）任务解决方案。
-
-如果你对信息抽取论文研究感兴趣，可以查看我的博客 [望江人工智库 信息抽取](https://yuanxiaosc.github.io/categories/%E8%AE%BA%E6%96%87/%E4%BF%A1%E6%81%AF%E6%8A%BD%E5%8F%96/)。
-
-## Abstract
-该代码以管道式的方式处理实体及关系抽取任务，首先使用一个多标签分类模型判断句子的关系种类，然后把句子和可能的关系种类输入序列标注模型中，序列标注模型标注出句子中的实体，最终结合预测的关系和实体输出实体-关系列表：（实体1，关系，实体2）。
-
-The code deals with entity and relationship extraction tasks in a pipeline way. First, a multi-label classification model is used to judge the relationship types of sentences. Then, the sentence and possible relationship types are input into the sequence labeling model. The sequence labeling model labels the entities in sentences, and finally combines the predicted relationship with the entity output entity-relationship list: (entity 1, relationship, entity 2).
-
-整个实体关系抽取代码的具体细节和运行过程可以阅读 [bert实践:关系抽取解读](https://blog.csdn.net/weixin_42001089/article/details/97657149)，如果还有疑问或者想法欢迎提Issues :smile:
 
 
 ### 任务
@@ -147,6 +137,10 @@ python run_sequnce_labeling.py \
 python produce_submit_json_file.py
 ```
 
+### 转换数据结果
+```
+python json2excel.py
 
+```
 ## Reference
 - [Reference](https://github.com/yuanxiaosc/Entity-Relation-Extraction)
